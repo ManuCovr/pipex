@@ -6,7 +6,7 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 13:11:22 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/17 11:36:21 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/17 14:52:31 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,14 @@ void	error_syntax(int flag)
 	exit (0);
 }
 
-
 void	ft_path(t_pip *ppx, char **envp)
 {
 	ppx->path = find_path(envp);
 	if (!ppx->path)
+	{
+		free(ppx->path);
 		exit(1);
+	}
 	ppx->cpath = ft_split(ppx->path, ':');
 }
 
