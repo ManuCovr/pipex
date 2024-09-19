@@ -6,7 +6,7 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 09:57:39 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/17 14:52:02 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/19 10:26:17 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,5 @@ void		ft_freechild(t_pip *ppx);
 void		ft_path(t_pip *ppx, char **envp);
 void		newborn(t_pip *ppx, char **argv, char **env);
 void		second_one(t_pip *ppx, char **argv, char **env);
-void	ft_free_split(char **split);
-
 
 #endif

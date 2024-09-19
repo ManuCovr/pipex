@@ -6,7 +6,7 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:40:52 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/17 13:01:48 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/19 10:26:05 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	newborn(t_pip *ppx, char **argv, char **env)
 	close(ppx->fd[0]);
 	close(ppx->fd[1]);
 	close(ppx->fd_infile);
-	if(ppx->dup_fd[0] < 0 || ppx->dup_fd[1] < 0)
+	if (ppx->dup_fd[0] < 0 || ppx->dup_fd[1] < 0)
 		error_syntax(1);
 	ppx->cargs = ft_split(argv[2], ' ');
 	ppx->cmd = try_this(ppx->cargs[0], ppx->cpath);
